@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="contact-container">
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="left-container"
+      >
+        <!-- Replace with your Access Key -->
+        <input
+          type="hidden"
+          name="access_key"
+          value="f4ec9457-9862-49c9-b4e7-1a8fb7acf90e"
+        />
+        <div class="contact_left_title">
+          <h2>Contact Us</h2>
+          <hr />
+        </div>
+        <input
+          class="contact-inputs"
+          type="text"
+          name="name"
+          placeholder="Enter your name"
+        />
+        <input
+          class="contact-inputs"
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+        />
+        <textarea
+          class="message"
+          name="message"
+          placeholder="Enter your message"
+          id=""
+        >
+        </textarea>
+        <button type="submit">
+          Submit
+          <img src="./arrow_icon.png" alt="" srcset="" />
+        </button>
+      </form>
+      <div class="right-container">
+        <!---<img src="./sun.gif" alt="" srcset="" /> --->
+        <div id="observablehq-chart-538f72e1"></div>
+        <script src="script.js"></script>
+      </div>
+    </div>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css"
+    />
+    <script type="module">
+      import {
+        Runtime,
+        Inspector,
+      } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+      import define from "https://api.observablehq.com/@d3/force-directed-graph/2.js?v=4";
+      new Runtime().module(define, (name) => {
+        if (name === "chart")
+          return new Inspector(
+            document.querySelector("#observablehq-chart-538f72e1")
+          );
+      });
+    </script>
+  </body>
+</html>

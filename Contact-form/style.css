@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: linear-gradient(#ffc5c5, #87ceeb);
+  background-repeat: no-repeat;
+}
+
+.contact-container {
+  display: flex;
+  /*border: 4px solid red;*/
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.left-container h2 {
+  font-weight: 700;
+  color: #920daa;
+  font-size: 50px;
+  margin-bottom: 5px;
+}
+.left-container hr {
+  border: none;
+  width: 120px;
+  background-color: #920daa;
+  height: 5px;
+  border-radius: 10px;
+}
+.contact-inputs,
+textarea {
+  width: 400px;
+  height: 50px;
+  border: 0;
+  outline: none;
+  border-radius: 50px;
+  padding-left: 25px;
+  color: #666;
+  font-weight: 600;
+  font-size: medium;
+}
+.left-container textarea {
+  height: 140px;
+  border-radius: 20px;
+}
+.left-container button {
+  border: 0;
+  outline: none;
+  background: linear-gradient(270deg, #ffbe3c, #fff30d);
+  font-size: 15px;
+  padding: 15px 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.contact-inputs:focus,
+textarea:focus {
+  border: 2px solid #ff994f;
+}
+.left-container button:hover {
+  filter: brightness(120%);
+  font-weight: 800;
+}
+@media (max-width: 800px) {
+  .right-container {
+    display: none;
+  }
+}
